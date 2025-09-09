@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gorpa Motors</title>
+  <style>
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #0f0f0f);
+  color: white;
+}
+
+/* textura sutil */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* ===== MENU SUPERIOR ===== */
+.top-menu {
+  display: flex;
+  justify-content: space-between; /* espaço entre logo e links */
+  align-items: center;
+  padding: 10px 20px;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-menu .links {
+  display: flex;
+  gap: 20px;
+}
+
+.top-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.top-menu a:hover {
+  background: #e60000;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background: #1eb954;
+}
+
+.logo {
+  height: 130px; /* tamanho proporcional */
+  width: auto;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: url('https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-664c-61f7-8f01-cf1931acabc4/raw?se=2025-08-27T20%3A27%3A18Z&sp=r&sv=2024-08-04&sr=b&scid=3e9b97b4-9b0c-5db6-985d-f19d55a7642d&skoid=a3412ad4-1a13-47ce-91a5-c07730964f35&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-26T21%3A19%3A08Z&ske=2025-08-27T21%3A19%3A08Z&sks=b&skv=2024-08-04&sig=GGSc5wyu1V%2BSVGgG1llJNiJ9jIn/%2Bbr/kMURdlNJ%2BKY%3D') center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 50px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #e60000;
+  margin-bottom: 20px;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.car-card {
+  background: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+}
+
+.car-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.car-info {
+  padding: 15px;
+}
+
+.car-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.price {
+  color: #fd3636;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  color: #aaa;
+  font-size: 14px;
+}
+  </style>
+</head>
+<body>
+
+  <!-- MENU COM LOGO -->
+  <div class="top-menu">
+    <img src="file:///C:/Users/Gamer/Desktop/programacao/carro.jpg" alt="Logo AutoCenter Guarapuava" class="logo">
+    <div class="links">
+      <a href="#sobre">Sobre Nós</a>
+      <a href="https://wa.me/554299999999" target="_blank" class="whatsapp-btn">Contato via WhatsApp</a>
+      <a href="mailto:contato@autocenter.com" class="nav-btn email">Contato via Email</a>
+    </div>
+  </div>
+
+  <header>
+    <h1>AutoCenter Guarapuava</h1>
+    <p>- Seu próximo carro começa aqui, com transparência e bons negócios -</p>
+  </header>
+
+  <div class="container" id="sobre">
+    <h2>Veículos à venda</h2>
+    <div class="car-grid">
+
+      <div class="car-card">
+        <img src="https://i.redd.it/fiat-uno-with-ladder-on-the-roof-read-the-description-v0-371nd728i2od1.jpg?width=1164&format=pjpg&auto=webp&s=05897a157d3f7154e3784aeea0585804c5398121" alt="Carro">
+        <div class="car-info">
+          <h3>Fiat Uno Mille </h3>
+          <p class="price">R$26,500</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://img.odcdn.com.br/wp-content/uploads/2025/03/iStock-1457413090-1920x1080.jpg" alt="Carro">
+        <div class="car-info">
+          <h3>Volkswagen Gol 1994</h3>
+          <p class="price">R$24,500</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://i.pinimg.com/736x/9c/ec/c7/9cecc75bd23e28081f60da27a418aa97.jpg" alt="Carro">
+        <div class="car-info">
+          <h3>Volkswagen Fusca</h3>
+          <p class="price">R$21,000</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://i.ytimg.com/vi/9U9s2PmtgT4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCZkGla8u7_krreix15bNqhCBo9Ww" alt="Carro">
+        <div class="car-info">
+          <h3>Chevrolet Chevette SL 1988</h3>
+          <p class="price">R$15,000</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://thegarage.com.br/wp-content/uploads/2025/04/opala-diplomata.png" alt="Carro">
+        <div class="car-info">
+          <h3>Opala Diplomata 4.1</h3>
+          <p class="price">R$55,700</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://gustavobrasil.com.br/wp-content/uploads/2023/12/IMG_0156.jpg" alt="Carro">
+        <div class="car-info">
+          <h3>Brasília 1600</h3>
+          <p class="price">R$32,000</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://img1.icarros.com/dbimg/galeriaimgmodelo/2/16551_1" alt="Carro">
+        <div class="car-info">
+          <h3>Fiat Palio Fire</h3>
+          <p class="price">R$30,000</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://i.pinimg.com/736x/70/1c/52/701c528420c03a72d23f533df621a266.jpg" alt="Carro">
+        <div class="car-info">
+          <h3>Saveiro Surf</h3>
+          <p class="price">R$49,200</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://cdn.carrosp.com.br/img/35/x/volkswagen-kombi-1.4-6588815-46890842.webp" alt="Carro">
+        <div class="car-info">
+          <h3>Kombi Standard</h3>
+          <p class="price">R$33,900</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://s3.carro57.com.br/FC/2769/2788745_13_W_835e277b5a.jpeg" alt="Carro">
+        <div class="car-info">
+          <h3>Ford Del Rey Guia</h3>
+          <p class="price">R$37,900</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://www.picellileiloes.com.br/arquivos/leiloes/lotes/imagens/0663d1c0d6e620.jpg" alt="Carro">
+        <div class="car-info">
+          <h3>Ford Corcell II LDO</h3>
+          <p class="price">R$25,000</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://armazemdovovo.com.br/images/anuncio/avv-chevrolet-corsa-wind-venda-77338xf/foto-seq-01-522148396-avv-129123187-dt-15-img-1056-1197033833.jpg" alt="Carro">
+        <div class="car-info">
+          <h3>Corsa Wind</h3>
+          <p class="price">R$15,000</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 AutoCenter Guarapuava - Todos os direitos reservados
+  </footer>
+</body>
+</html>
